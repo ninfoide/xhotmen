@@ -8,8 +8,8 @@ enableRobotsTXT = true    # Suggested, enable theme robots.txt file
 SectionPagesMenu = "main" # Enable menu system for lazy bloggers
 
 [Params]
-    tagline = "My example site subtitle"           # Subtitle of your site
-    description = "Generic description of my site" # Description of your site
+    tagline = "Site For Gay Men"           # Subtitle of your site
+    description = "Site For Gay Men" # Description of your site
     # See the documentation on the Authorbox for more on setting it up
     # https://shadow53.gitlab.io/BluestNight/docs/pages/authorbox/
     authorbox = true                               # Show the Authorbox by default
@@ -50,7 +50,7 @@ SectionPagesMenu = "main" # Enable menu system for lazy bloggers
 
 [Params.widgets]
     search = true                 # Enable a search bar widget
-    recent_articles = true        # Enable "Recent articles" widget
+    recent_articles = false        # Enable "Recent articles" widget
     categories = true             # Enable "Categories" widget
     tags = true                   # Enable "Tags" widget
     #patreon = "mypatreonusername" # Enable "Patreon" widget
@@ -68,36 +68,12 @@ SectionPagesMenu = "main" # Enable menu system for lazy bloggers
 
     [menu]
       [[menu.main]]
-        name = "Documentation"
+        name = "Video"
         weight = 1
-        identifier = "docs"
-        url = "#"
-        [[menu.main]]
-          name = "Pages"
-          weight = 1
-          parent = "docs"
-          identifier = "docs-pages"
-          url = "#"
-        [[menu.main]]
-          name = "Shortcodes"
-          weight = 1
-          parent = "docs"
-          identifier = "docs-shortcodes"
-          url = "#"
-        [[menu.main]]
-          name = "Sidebar"
-          weight = 1
-          parent = "docs"
-          identifier = "docs-sidebar"
-          url = "#"
-        [[menu.main]]
-          name = "Site"
-          weight = 1
-          parent = "docs"
-          identifier = "docs-site"
-          url = "#"
+        identifier = "video"
+        url = "/video/"
       [[menu.main]]
-        name = "Tutorials"
-        weight = 10
-        identifier = "tutorials"
-        url = "#"
+        name = "Photos"
+        weight = 2
+        identifier = "photos"
+        url = "/photos/"

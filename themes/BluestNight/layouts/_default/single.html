@@ -28,6 +28,14 @@
       <figure class="thumbnail">
         <img src="{{ .Params.thumbnail | absURL }}" alt="{{ .Title }}">
       </figure>
+
+      {{- else -}}
+      {{- if or (.Params.video.url) (.Params.video.poster) -}}
+      <video class="thumbnail" poster="{{ .Params.video.poster | absURL }}" width="100%" controls >
+        <source src="{{ .Params.video.url | absURL }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      {{- end -}}
       {{- end -}}
       {{ if and (isset .Params "enable_toc") (eq .Params.enable_toc true) }}{{ .TableOfContents }}{{ end }}
       <span itemprop="articleBody">{{ .Content }}</span>

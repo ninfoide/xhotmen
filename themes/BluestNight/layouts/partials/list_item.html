@@ -7,6 +7,18 @@
       </a>
     </figure>
   </div>
+
+  {{- else -}}
+  {{- if or (.Params.video.url) (.Params.video.poster) -}}
+  <div>
+    <a href="{{ .Permalink }}">
+      <video poster="{{ .Params.video.poster | absURL }}" width="100%" controls>
+        <source src="{{ .Params.video.url | absURL }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </a>
+  </div>
+  {{- end -}}
   {{- end -}}
   <div>
     <header class="post-list-title">
@@ -22,9 +34,9 @@
       <p>
         {{- $page := . -}}
         {{- with .Description -}}
-          {{ . | plainify | htmlUnescape | replaceRE "(?m)(\\s+)" " " }} <a href="{{ $page.Permalink }}">[Read more...]</a>
+          {{ . | plainify | htmlUnescape | replaceRE "(?m)(\\s+)" " " }} <a href="{{ $page.Permalink }}">[More...]</a>
         {{- else -}}
-          {{ .Summary | plainify | htmlUnescape | replaceRE "(?m)(\\s+)" " " }}{{ if .Truncated }} <a href="{{ $page.Permalink }}">[Read more...]</a>{{ end }}
+          {{ .Summary | plainify | htmlUnescape | replaceRE "(?m)(\\s+)" " " }}{{ if .Truncated }} <a href="{{ $page.Permalink }}">[More...]</a>{{ end }}
         {{- end -}}
       </p>
     </div>

@@ -8,7 +8,7 @@
   {{ .Content }}
   {{- if (or (not (isset .Params "hide_list")) (not .Params.hide_list)) -}}
     {{- if .IsHome -}}
-      {{- $paginator := .Paginate (where .Data.Pages "Section" "post") -}}
+      {{- $paginator := .Paginate (where .Data.Pages "Type" "post") -}}
       {{- range $paginator.Pages -}}
         {{ partial "list_item.html" . }}
       {{- end -}}
