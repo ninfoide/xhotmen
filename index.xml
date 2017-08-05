@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>X Hot Men</title>
-    <link>https://ninfoide.github.io/xhotmen.github.io/</link>
+    <link>https://ninfoide.github.io/</link>
     <description>Recent content on X Hot Men</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://ninfoide.github.io/xhotmen.github.io/" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ninfoide.github.io/" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>
